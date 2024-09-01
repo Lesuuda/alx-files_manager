@@ -14,14 +14,14 @@ class UsersController {
 
         //check if password is provided
         if (!password) {
-            return res.status(400).json({ error: 'Missing Password'});
+            return res.status(400).json({ error: 'Missing password'});
         }
 
         //check if email already exists
         const usersCollection = dbClient.db.collection('users');
         const userExists = await usersCollection.findOne({ email });
         if (userExists) {
-            return res.status(400).json({ error: 'Already exists' });
+            return res.status(400).json({ error: 'Already exist' });
         }
 
         //hash the password using SHA1
