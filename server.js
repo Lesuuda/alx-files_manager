@@ -1,8 +1,7 @@
 /* eslint-disable */
 
-const express = require('express');
-const routes = require('./routes/index');
-
+import express from 'express'
+import routes from './routes/index.js'
 const app = express();
 const PORT = process.env.PORT || 5000;
 
